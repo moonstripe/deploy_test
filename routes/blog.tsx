@@ -54,30 +54,18 @@ export default ({ data, url }: PageProps) => {
             <Layout meta={meta}>
                 <NavWrappedPage slug={url.pathname} />
 
-                <div class="grid grid-cols-1 md:grid-cols-2 md:ap-2">
+                <div class="grid grid-cols-1 md:grid-cols-1 md:ap-2">
                     <div class="md:col-span-1 container my-4">
-                        <h1 class="visible text-transparent text-4xl py-1 bg-clip-text bg-gradient-to-br dark:from-green-400 dark:via-lime-200 dark:to-yellow-600 from-yellow-600 via-lime-200 to-green-400 mb-4">Selected Thoughts</h1>
+                        <h1 class="visible text-transparent text-4xl py-1 bg-clip-text bg-gradient-to-br dark:from-green-400 dark:via-lime-200 dark:to-yellow-600 from-yellow-600 via-lime-200 to-green-400 mb-4">All Thoughts</h1>
                         {
-                            data.blogArticles.map((e: PostModel, i: number) => i < 6 ? (
+                            data.blogArticles.map((e: PostModel, i: number) =>(
                                 <div class="my-3">
                                     <a href={`/${e.slug.split('.')[0]}`}>
                                         <h1 class="text-2xl text-gray-700 dark:text-green-200">{e.title.slice(2, e.title.length)}</h1>
                                         <p class="text-lg text-gray-500 dark:text-green-400">{e.date}</p>
                                     </a>
                                 </div>
-                            ) : null)
-                        }
-                    </div>
-                    <div class="md:col-span-1 container my-4 p-3">
-                        {
-                            data.blogArticles.map((e: PostModel, i: number) => (i > 6 && i < 14) ? (
-                                <div class="my-3">
-                                    <a href={`/${e.slug.split('.')[0]}`}>
-                                        <h1 class="text-2xl text-gray-700 dark:text-green-200">{e.title.slice(2, e.title.length)}</h1>
-                                        <p class="text-lg text-gray-500 dark:text-green-400">{e.date}</p>
-                                    </a>
-                                </div>
-                            ) : null)
+                            ))
                         }
                     </div>
                 </div>

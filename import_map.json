@@ -11,6 +11,7 @@
     "markdown": "https://deno.land/x/markdown@v2.0.0/mod.ts",
     "hljs": "https://unpkg.com/@highlightjs/cdn-assets@11.6.0/es/highlight.min.js",
     "three": "https://esm.sh/three@0.143.0",
-    "orbit": "https://esm.sh/three@0.143.0/examples/jsm/controls/OrbitControls"
+    "orbit": "https://esm.sh/three@0.143.0/examples/jsm/controls/OrbitControls",
+    "AsciiEffect": "./utils/js/AsciiEffect.js"
   }
 }
